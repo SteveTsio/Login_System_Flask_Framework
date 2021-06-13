@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "d:\\Επιφάνεια εργασίας\\code\\Flask_login_system\\.venv\\Scripts\\python.exe",
+    "python.terminal.activateEnvironment": true,
+
+    "files.associations": {
+        "*.html": "jinja-html"
+    },
+
+    "emmet.includeLanguages": {
+        "jinja-html": "html"
+    },
+}

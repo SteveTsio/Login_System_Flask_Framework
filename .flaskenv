@@ -1,0 +1,5 @@
+FLASK_APP=app.py
+FLASK_ENV=development
+
+SERVER_PORT = 3000
+SECRET_KEY=32d7d9e8fd9c17a32b1adfc22d889eb2
