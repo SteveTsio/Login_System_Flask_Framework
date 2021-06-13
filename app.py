@@ -85,7 +85,20 @@ def login():
 
         session["username"] = username
         session['logged_in'] = True
-        return render_template('profile.html', username = username)
+        cur = get_conn().cursor()
+        mail = cur.execute(
+        '''
+        SELECT [email]
+        FROM [users]
+        WHERE [username] = :username
+        ''', {'username': username }
+        ).fetchone()
+
+        setattr(g, 'mail', mail)
+
+        cur.close()
+
+        return render_template('profile.html', username = username, mail = mail)
 
 
 #Εδώ είναι η σελίδα που φέρνει το προφίλ του χρήστη  Αναφέρεται στην εργασία ώς τρίτο route
